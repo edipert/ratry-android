@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Ratry</string>
+    <string name="label_import">Import</string>
+    <string name="label_create">Create</string>
+    <string name="label_next">Next</string>
+    <string name="label_restore_from_seed">Restore from seed</string>
+    <string name="label_restore_from_key">Restore from key</string>
+    <string name="label_restore_from_seed_hint">Restore your wallet from 12 word combination code.</string>
+    <string name="label_restore_from_key_hint">Restore your wallet from private key of your Ethereum account.</string>
+    <string name="label_done">Done</string>
+    <string name="hint_name">Profile Name</string>
+    <string name="hint_surname">Surname</string>
+    <string name="label_identify">Set your name and surname</string>
+    <string name="warning_empty_name">Please fill required fields</string>
+    <string name="label_welcome">Welcome!</string>
+    <string name="hint_list_name">Place Name</string>
+    <string name="hint_amount">Amount</string>
+    <string name="label_add">Add</string>
+    <string name="label_propose">Propose</string>
+    <string name="discover_hint_text">Search...</string>
+    <string name="label_welcome_title">Welcome, %s!</string>
+</resources>

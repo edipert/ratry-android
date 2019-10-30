@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.ratry.android.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_proposeFragment"
+            app:destination="@id/proposeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_walletFragment"
+            app:destination="@id/walletFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/optionFragment"
+        android:name="com.ratry.android.ui.option.OptionFragment"
+        android:label="OptionFragment"
+        tools:layout="@layout/option_fragment">
+        <action
+            android:id="@+id/action_optionFragment_to_restoreFragment"
+            app:destination="@id/restoreFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.ratry.android.ui.welcome.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/welcome_fragment">
+        <action
+            android:id="@+id/action_welcomeFragment_to_optionFragment"
+            app:destination="@id/optionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/restoreFragment"
+        android:name="com.ratry.android.ui.restore.RestoreFragment"
+        android:label="RestoreFragment"
+        tools:layout="@layout/restore_fragment">
+
+        <argument
+            android:name="option"
+            app:argType="com.ratry.android.constant.RestoreOption"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_restoreFragment_to_identifyFragment"
+            app:destination="@id/identifyFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/identifyFragment"
+        android:name="com.ratry.android.ui.identify.IdentifyFragment"
+        android:label="IdentifyFragment"
+        tools:layout="@layout/identify_fragment">
+        <action
+            android:id="@+id/action_identifyFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.ratry.android.ui.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/splash_fragment">
+        <action
+            android:id="@+id/action_splashFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_graph" />
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/proposeFragment"
+        android:name="com.ratry.android.ui.propose.ProposeFragment"
+        android:label="ProposeFragment"
+        tools:layout="@layout/propose_fragment">
+
+        <argument
+            android:name="threadId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.ratry.android.ui.list.ListFragment"
+        android:label="ListFragment"
+        tools:layout="@layout/list_fragment">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="threadId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.ratry.android.ui.wallet.WalletFragment"
+        android:label="WalletFragment"
+        tools:layout="@layout/wallet_fragment" />
+
+</navigation>
